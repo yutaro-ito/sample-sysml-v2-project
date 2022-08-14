@@ -1,8 +1,41 @@
 # Sample SysML v2 Project
 ## Purpose
-xxx
-## Sample System Specification
-xxx
+The purpose of this repository is to share the sample SysML v2 source files.  
+The sample project follows [SysML v2 2022-07](https://github.com/Systems-Modeling/SysML-v2-Release/tree/2022-07).
+## Assumed Situation
+### Who are you?
+You are a systems engineer.  
+
+You work in the system development company XXX and have to develop an Emergency Alert Control System, which issues alert when high impacts are detected. The system will be delivered to the customer in company YYY.
+
+Your responsibility is to complete the followings.
+
+- Identify stakeholder needs and concern and satisfy them
+  - Model system requirements and system architecture to satisfy customer needs
+  - Model system architecture and allocate its elements to software to satisfy software engineer needs
+  - Model scenarios based on system architecture to satisfy verification engineer needs
+
+The image of the stakeholder relationships is as below.
+
+![System Overview](image/stakeholder-relationships.drawio.svg)
+
+### What do you develop?
+The sample system is Emergency Alert Control System.  
+
+If the system detects strong impacts (i.e. high acceleration) at normal temperatures, the system issues an emergency alert. However, if the system detects high temperature, the system does not issue emergency alerts to prevent false alerts due to sensor failures.
+
+This system consists of the following four components categorized as IPO (Input-Process-Output).
+
+- Input
+  - Acceleration Sensor detects impacts of the system.
+  - Temperature Sensor measures the temperature of the system.
+- Process
+  - Controller decides whether an emergency alert will be issued or not according to inputs from Acceleration Sensor and Temperature Sensor.
+- Output
+  - Actuator transmits emergency alert ON/OFF signals to some External System according to the decision from Controller.
+
+The image of the Emergency Alert Control System is as below.
+
 ![System Overview](image/system-overview.drawio.svg)
 ## MBSE Methodology
 xxx

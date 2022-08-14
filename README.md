@@ -38,4 +38,19 @@ The image of the Emergency Alert Control System is as below.
 
 ![System Overview](image/system-overview.drawio.svg)
 ## MBSE Methodology
-xxx
+The MBSE methodology is based on [SYSMOD](https://mbse4u.com/sysmod/).
+
+| #   | Process                                                                             | 
+| --- | ----------------------------------------------------------------------------------- | 
+| 1   | [Stakeholder Definition](src/system-stakeholder.sysml)                              | 
+| 2   | [Viewpoint and View Definition](src/system-viewpoint-and-view.sysml)                | 
+| 3   | [System Base Architecture Definition](src/system-base-architecture.sysml)           | 
+| 4   | [System Requirement Definition](src/system-requirement.sysml)                       | 
+| 5   | [System Context Definition](src/system-context.sysml)                               | 
+| 6   | [System Use Case Definition](src/system-use-case.sysml)                             | 
+| 7   | [System Use Case Activity Definition](src/system-use-case-activity.sysml)           | 
+| 8   | [System Process Definition](src/system-process.sysml)                               | 
+| 9   | [System Domain Knowledge Definition](src/system-domain-knowledge.sysml)             | 
+| 10  | [System Logical Architecture Definition](src/system-logical-architecture-stm.sysml) | 
+| 11  | [System State Machine Definition](src/system-logical-architecture-stm.sysml)        | 
+| 12  | [System Scenario Definition](src/system-logical-architecture-sd.sysml)              | 

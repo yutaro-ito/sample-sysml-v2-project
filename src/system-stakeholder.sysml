@@ -9,8 +9,8 @@ package 'Emergency Alert Control System Stakeholder'
         stakeholder 'Customer';
     }
 
-    concern 'requirement refinement' {
-        doc /* Will you refine the requirements and allocate them to HW and SW correctly? */
+    concern 'decomposition and allocation' {
+        doc /* Will you decompose system to sub-systems and allocate them to HW and SW correctly? */
         stakeholder 'Customer';
         stakeholder 'Software Engineer';
     }
@@ -21,16 +21,13 @@ package 'Emergency Alert Control System Stakeholder'
         stakeholder 'Software Engineer';
     }
 
-    concern 'feasible system requirement and architecture' {
-        doc /* Will you create system requirements and architecture
-               with which software engineers can define their software requirements and  architecture?
-         */
+    concern 'desigbable architecture' {
+        doc /* Will you create architecture with which software engineers can define their software requirements and architecture? */
         stakeholder 'Software Engineer';
     }
 
-    concern 'verifiable architecture scenario' {
-        doc /* Will you create verifiable system architecture scenario?
-         */
+    concern 'verifiable requirements and architecture' {
+        doc /* Will you create requirements and architecture with which verification engineers can define their test scenarios? */
         stakeholder 'Verification Engineer';
     }
 }

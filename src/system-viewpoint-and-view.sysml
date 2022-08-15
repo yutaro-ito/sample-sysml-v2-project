@@ -1,6 +1,10 @@
 package 'EACS Viewpoint and View'
 {
     import 'EACS Stakeholder'::*;
+
+    // ====================================
+    // Definition of Viewpoints
+    // ====================================
     viewpoint 'customer quality viewpoint'
     {
         frame 'requirement traceability';
@@ -37,7 +41,9 @@ package 'EACS Viewpoint and View'
         }
     }
 
-    /* Views are ToDO */
+    // ====================================
+    // Definition of Views (ToDo)
+    // ====================================
     view def 'AAA View'
     {
         satisfy 'customer quality viewpoint';

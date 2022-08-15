@@ -1,9 +1,15 @@
 package 'EACS Stakeholder'
 {
+    // ====================================
+    // Definition of Stakeholders
+    // ====================================
     part def 'Customer';
     part def 'Software Engineer';
     part def 'Verification Engineer';
 
+    // ====================================
+    // Definition of Stakeholders' Concerns
+    // ====================================
     concern 'requirement traceability' {
         doc /* Will the traceable requirements in the system be completely and correctly defined? */
         stakeholder 'Customer';

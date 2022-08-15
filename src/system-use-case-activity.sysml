@@ -6,6 +6,7 @@ package 'EACS System Use Case Activity'
     // Definition of Use Case Activities
     // ====================================
     // Main Action
+    action def System_Process();
     action def Start_System();
     action def Stop_System();
     action def Monitor_Acceleration(out out_accel: Item_Acceleration);
@@ -24,59 +25,76 @@ package 'EACS System Use Case Activity'
     // ====================================
     // Usage of Use Case Activities
     // ====================================
-    action start_system: Start_System {
+    action system_process: System_Process {
         first start;
+        then action start_system: Start_System {
+            first start;
+            then fork;
+                then initialize_acceleration_sensor;
+                then initialization_temperature_sensor;
+            
+            action initialize_acceleration_sensor: Initialize_Acceleration_Sensor;
+            then joinNode;
+            
+            action initialization_temperature_sensor: Initialize_Temperature_Sensor;
+            then joinNode;
+            
+            join joinNode;
+            then done;
+        }
         then fork;
-            then initialize_acceleration_sensor;
-            then initialization_temperature_sensor;
+            then monitor_acceleration;
+            then monitor_temperature;
+            then send_alert_signal_periodically;
         
-        action initialize_acceleration_sensor: Initialize_Acceleration_Sensor;
-        then joinNode;
-        
-        action initialization_temperature_sensor: Initialize_Temperature_Sensor;
-        then joinNode;
-        
-        join joinNode;
-        then done;
-    }
-    action stop_system: Stop_System {
-        first start;
-        then action stop_sending_alert_signal: Stop_Sending_Alert_Signal;
-        then done;
-    }
-    action monitor_acceleration: Monitor_Acceleration {
-        out item out_accel;
-        
-        first start;
-        then merge continueMonitoring;
-        then action capture_acceleration: Capture_Acceleration {
-            out item out_accel = monitor_acceleration::out_accel;
+        action monitor_acceleration: Monitor_Acceleration {
+            out item out_accel;
+            
+            first start;
+            then merge continueMonitoring;
+            then action capture_acceleration: Capture_Acceleration {
+                out item out_accel = monitor_acceleration::out_accel;
+            }
+            then continueMonitoring;
         }
-        then continueMonitoring;
-    }
-    action monitor_temperature: Monitor_Temperature {
-        out item out_temp;
-        
-        first start;
-        then merge continueMonitoring;
-        then action capture_temperature: Capture_Temperature {
-            out item out_temp = monitor_temperature::out_temp;
+        then joinNode;
+        action monitor_temperature: Monitor_Temperature {
+            out item out_temp;
+            
+            first start;
+            then merge continueMonitoring;
+            then action capture_temperature: Capture_Temperature {
+                out item out_temp = monitor_temperature::out_temp;
+            }
+            then continueMonitoring;
         }
-        then continueMonitoring;
-    }
-    action send_alert_signal_periodically: Send_Alert_Signal_Periodically {
-        first start;
-        then merge continueSending;
+        then joinNode;
+        action send_alert_signal_periodically: Send_Alert_Signal_Periodically {
+            first start;
+            then merge continueSending;
 
-        then decide;
-            if ((in_temp < -40) || (in_temp > 80)) then send_alert_signal_off;
-            if (((in_accel >= -50) && (in_accel <= 50)) && ((in_temp >= -40) && (in_temp <= 80))) then send_alert_signal_off;
-            if (((in_accel < -50) || (in_accel > 50)) && ((in_temp >= -40) && (in_temp <= 80))) then send_alert_signal_on;
-                
-        action send_alert_signal_on: Send_Alert_Signal_ON;
-        then continueSending;
-                
-        action send_alert_signal_off: Send_Alert_Signal_OFF;
-        then continueSending;
+            in in_accel flow from monitor_acceleration.out_accel;
+            in in_temp flow from monitor_temperature.out_temp;
+
+            then decide;
+                if ((in_temp < -40) || (in_temp > 80)) then send_alert_signal_off;
+                if (((in_accel >= -50) && (in_accel <= 50)) && ((in_temp >= -40) && (in_temp <= 80))) then send_alert_signal_off;
+                if (((in_accel < -50) || (in_accel > 50)) && ((in_temp >= -40) && (in_temp <= 80))) then send_alert_signal_on;
+                    
+            action send_alert_signal_on: Send_Alert_Signal_ON;
+            then continueSending;
+                    
+            action send_alert_signal_off: Send_Alert_Signal_OFF;
+            then continueSending;
+        }
+        then joinNode;
+
+        join joinNode;
+        then action stop_system: Stop_System {
+            first start;
+            then action stop_sending_alert_signal: Stop_Sending_Alert_Signal;
+            then done;
+        }
+        then done;
     }
 }

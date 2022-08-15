@@ -48,8 +48,7 @@ The MBSE processes in this example are as below.
 | 4   | [System Context Definition](src/system-context.sysml)                               | 
 | 5   | [System Use Case Definition](src/system-use-case.sysml)                             | 
 | 6   | [System Use Case Activity Definition](src/system-use-case-activity.sysml)           | 
-| 7   | [System Process Definition](src/system-process.sysml)                               | 
-| 8   | [System Domain Knowledge Definition](src/system-domain-knowledge.sysml)             | 
-| 9   | [System Logical Architecture Definition](src/system-logical-architecture-stm.sysml) | 
-| 10  | [System State Machine Definition](src/system-logical-architecture-stm.sysml)        | 
-| 11  | [System Scenario Definition](src/system-logical-architecture-sd.sysml)              | 
+| 7   | [System Domain Knowledge Definition](src/system-domain-knowledge.sysml)             | 
+| 8   | [System Logical Architecture Definition](src/system-logical-architecture-stm.sysml) | 
+| 9   | [System State Machine Definition](src/system-logical-architecture-stm.sysml)        | 
+| 10  | [System Scenario Definition](src/system-logical-architecture-sd.sysml)              | 

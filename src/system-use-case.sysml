@@ -1,4 +1,4 @@
-package 'EACS_System_Use_Case'
+package 'EACS System Use Case'
 {
     
 }

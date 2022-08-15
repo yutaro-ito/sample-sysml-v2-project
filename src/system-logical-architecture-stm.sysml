@@ -1,4 +1,4 @@
-package 'EACS_Logical_Architecture_State_Machine'
+package 'EACS Logical Architecture State Machine'
 {
     
 }

@@ -1,6 +1,6 @@
-package 'EACS_Viewpoint_and_View'
+package 'EACS Viewpoint and View'
 {
-    import 'Emergency Alert Control System Stakeholder'::*;
+    import 'EACS Stakeholder'::*;
     viewpoint 'customer quality viewpoint'
     {
         frame 'requirement traceability';

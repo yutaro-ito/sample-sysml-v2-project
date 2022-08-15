@@ -1,4 +1,4 @@
-package 'EACS_Logical_Architecture_Sequence'
+package 'EACS Logical Architecture Sequence'
 {
     
 }

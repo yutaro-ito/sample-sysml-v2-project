@@ -1,4 +1,4 @@
-package 'EACS_Stakeholder'
+package 'EACS Stakeholder'
 {
     part def 'Customer';
     part def 'Software Engineer';

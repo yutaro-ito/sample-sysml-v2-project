@@ -1,4 +1,4 @@
-package 'EACS_System_Process'
+package 'EACS System Process'
 {
     
 }

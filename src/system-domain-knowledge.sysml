@@ -1,4 +1,4 @@
-package 'EACS_Domain_Knowledge'
+package 'EACS Domain Knowledge'
 {
     
 }

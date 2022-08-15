@@ -5,7 +5,6 @@ package 'EACS Logical Architecture State Machine'
     attribute def TRG_Power_ON;
     attribute def TRG_Power_OFF;
     attribute def TRG_Initialization_Completed;
-    attribute def TRG_Sensor_Failed;
 
     state eace_state_machine: EACS_State_Machine {
         // Entry

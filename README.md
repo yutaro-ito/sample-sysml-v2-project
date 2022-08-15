@@ -24,15 +24,11 @@ The sample system is Emergency Alert Control System (EACS).
 
 If the system detects strong impacts (i.e. high acceleration) at normal temperatures, the system issues an emergency alert. However, if the system detects high temperature, the system does not issue emergency alerts to prevent false alerts due to sensor failures.
 
-The EACS consists of the following four components categorized as IPO (Input-Process-Output).
+The EACS consists of the following four components.
 
-- Input
-  - Acceleration Sensor detects impacts of the system.
-  - Temperature Sensor measures the temperature of the system.
-- Process
-  - Controller decides whether an emergency alert will be issued or not according to inputs from Acceleration Sensor and Temperature Sensor.
-- Output
-  - Actuator transmits emergency alert ON/OFF signals to some External System according to the decision from Controller.
+- Acceleration Sensor detects impacts of the system.
+- Temperature Sensor measures the temperature of the system.
+- Controller decides whether an emergency alert will be issued or not according to inputs from Acceleration Sensor and Temperature Sensor.
 
 The image of the Emergency Alert Control System is as below.
 

@@ -45,27 +45,28 @@ package 'EACS System Use Case Activity'
         then done;
     }
     action monitor_acceleration: Monitor_Acceleration {
+        out item out_accel;
+        
         first start;
         then merge continueMonitoring;
         then action capture_acceleration: Capture_Acceleration {
-            out out_accel = monitor_acceleration.out_accel;
+            out item out_accel = monitor_acceleration::out_accel;
         }
         then continueMonitoring;
     }
     action monitor_temperature: Monitor_Temperature {
+        out item out_temp;
+        
         first start;
         then merge continueMonitoring;
         then action capture_temperature: Capture_Temperature {
-            out out_temp = monitor_temperature.out_temp;
+            out item out_temp = monitor_temperature::out_temp;
         }
         then continueMonitoring;
     }
     action send_alert_signal_periodically: Send_Alert_Signal_Periodically {
         first start;
         then merge continueSending;
-        
-        in in_accel = monitor_acceleration.out_accel;
-        in in_temp = monitor_temperature.out_temp;
 
         then decide;
             if ((in_temp < -40) || (in_temp > 80)) then send_alert_signal_off;

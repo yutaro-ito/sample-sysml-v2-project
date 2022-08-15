@@ -1,7 +1,7 @@
 package 'EACS Logical Architecture'
 {
     import 'EACS System Context'::*;
-    import 'EACS Item and Interface'::*;
+    import 'EACS Item'::*;
 
     // ====================================
     // Definitions of System Logical Architecture

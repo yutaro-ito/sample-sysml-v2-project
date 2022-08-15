@@ -1,6 +1,6 @@
 package 'EACS System Use Case Activity'
 {
-    import 'EACS Item and Interface'::*;
+    import 'EACS Item'::*;
     
     // ====================================
     // Definition of Use Case Activities

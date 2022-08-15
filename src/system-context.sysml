@@ -10,4 +10,9 @@ package 'EACS System Context'
         part ext_sys: External_System[1];
         part ext_env: External_Environment[1..*];
     }
+
+    // ====================================
+    // Usage of System Context
+    // ====================================
+    part etac_sys_cxt: EACS_System_Context;
 }

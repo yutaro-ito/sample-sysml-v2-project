@@ -6,7 +6,7 @@ The sample project follows [SysML v2 2022-07](https://github.com/Systems-Modelin
 ### Who are you?
 You are a systems engineer.  
 
-You work in the system development company XXX and have to develop an Emergency Alert Control System, which issues alert when high impacts are detected. The system will be delivered to the customer in company YYY.
+You work in the system development company XXX and have to develop an Emergency Alert Control System (EACS), which issues alert when high impacts are detected. The system will be delivered to the customer in company YYY.
 
 Your responsibility is to complete the followings.
 
@@ -20,11 +20,11 @@ The image of the stakeholder relationships is as below.
 ![System Overview](image/stakeholder-relationships.drawio.svg)
 
 ### What do you develop?
-The sample system is Emergency Alert Control System.  
+The sample system is Emergency Alert Control System (EACS).  
 
 If the system detects strong impacts (i.e. high acceleration) at normal temperatures, the system issues an emergency alert. However, if the system detects high temperature, the system does not issue emergency alerts to prevent false alerts due to sensor failures.
 
-This system consists of the following four components categorized as IPO (Input-Process-Output).
+The EACS consists of the following four components categorized as IPO (Input-Process-Output).
 
 - Input
   - Acceleration Sensor detects impacts of the system.

@@ -20,6 +20,7 @@ package 'EACS System Use Case Activity'
     action def Capture_Temperature(in in_ext_temp: Item_External_Temperature, out out_temp: Item_Captured_Temperature);
     action def Send_Alert_Signal_ON(out out_alert_sig_on: Item_Alert_Signal);
     action def Send_Alert_Signal_OFF(out out_alert_sig_off: Item_Alert_Signal);
+    action def Send_Alert_Signal_Initial(out out_alert_sig_off: Item_Alert_Signal);
     action def Stop_Sending_Alert_Signal();
 
     // ====================================
@@ -38,7 +39,7 @@ package 'EACS System Use Case Activity'
             then fork;
                 then initialize_acceleration_sensor;
                 then initialization_temperature_sensor;
-                then send_alert_signal_off;
+                then send_alert_signal_init;
             
             action initialize_acceleration_sensor: Initialize_Acceleration_Sensor;
             then joinNode;
@@ -46,7 +47,7 @@ package 'EACS System Use Case Activity'
             action initialization_temperature_sensor: Initialize_Temperature_Sensor;
             then joinNode;
 
-            action send_alert_signal_off: Send_Alert_Signal_OFF {
+            action send_alert_signal_init: Send_Alert_Signal_Initial {
                 out item out_alert_sig_off = start_system::out_alert_sig;
             }
             then joinNode;

@@ -2,16 +2,29 @@ package 'EACS Logical Architecture'
 {
     import 'EACS System Context'::*;
     import 'EACS Item'::*;
+    import 'EACS System Use Case Activity'::*;
 
     // ====================================
     // Definitions of System Logical Architecture
     // ====================================
     part def EACS_Logical_Architcture :> EACS;
     part eacs_logical_architcture: EACS_Logical_Architcture {
-        // Part
-        part accel_sensor: Acceleration_Sensor[1];
-        part temp_sensor: Temperature_Sensor[1];
-        part controller: Controller[1];
+        // Part with Actions
+        perform action perf_system_process :> system_process;
+        part accel_sensor: Acceleration_Sensor[1] {
+            perform perf_system_process.start_system.initialize_acceleration_sensor;
+            perform perf_system_process.monitor_acceleration.capture_acceleration;
+        }
+        part temp_sensor: Temperature_Sensor[1] {
+            perform perf_system_process.start_system.initialization_temperature_sensor;
+            perform perf_system_process.monitor_temperature.capture_temperature;
+        }
+        part controller: Controller[1] {
+            perform perf_system_process.start_system.send_alert_signal_init;
+            perform perf_system_process.send_alert_signal_periodically.send_alert_signal_off;
+            perform perf_system_process.send_alert_signal_periodically.send_alert_signal_on;
+            perform perf_system_process.stop_system.stop_sending_alert_signal;
+        }
 
         // Port (External Interfaces)
         port p_ext_in_ext_accel: ~Port_External_Acceleration;

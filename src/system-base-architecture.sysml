@@ -1,4 +1,0 @@
-package 'EACS Base Architecture'
-{
-    
-}

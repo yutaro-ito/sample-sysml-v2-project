@@ -1,6 +1,6 @@
 package 'EACS System Use Case Activity'
 {
-    import 'EACS Domain Knowledge'::*;
+    import 'EACS Item and Interface'::*;
     
     // ====================================
     // Definition of Use Case Activities

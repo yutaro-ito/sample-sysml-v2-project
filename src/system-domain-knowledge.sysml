@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Domain Knowledge'
+package 'EACS_Domain_Knowledge'
 {
     
 }

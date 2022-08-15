@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Use Case'
+package 'EACS_System_Use_Case'
 {
     
 }

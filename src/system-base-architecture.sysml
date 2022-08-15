@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Base Architecture'
+package 'EACS_Base_Architecture'
 {
     
 }

@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Logical Architecture State Machine'
+package 'EACS_Logical_Architecture_State_Machine'
 {
     
 }

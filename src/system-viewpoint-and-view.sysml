@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Viewpoint and View'
+package 'EACS_Viewpoint_and_View'
 {
     import 'Emergency Alert Control System Stakeholder'::*;
     viewpoint 'customer quality viewpoint'

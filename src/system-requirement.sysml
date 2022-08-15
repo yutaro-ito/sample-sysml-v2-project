@@ -1,4 +1,4 @@
-package 'Emergency Alert System Requirement'
+package 'EACS_System_Requirement'
 {
     
 }

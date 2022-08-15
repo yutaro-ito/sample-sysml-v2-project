@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Process'
+package 'EACS_System_Process'
 {
     
 }

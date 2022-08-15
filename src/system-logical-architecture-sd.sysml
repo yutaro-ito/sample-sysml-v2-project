@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Logical Architecture Sequence'
+package 'EACS_Logical_Architecture_Sequence'
 {
     
 }

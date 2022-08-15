@@ -1,4 +1,4 @@
-package 'Emergency Alert Control System Stakeholder'
+package 'EACS_Stakeholder'
 {
     part def 'Customer';
     part def 'Software Engineer';

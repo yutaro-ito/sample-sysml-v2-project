@@ -2,6 +2,8 @@ package 'EACS Viewpoint and View'
 {
     import 'EACS Stakeholder'::*;
 
+    /* ToDo */
+
     // ====================================
     // Definition of Viewpoints
     // ====================================
@@ -38,36 +40,27 @@ package 'EACS Viewpoint and View'
     // ====================================
     // Definition of Views (ToDo)
     // ====================================
-    view def 'AAA View' {
+    view def 'Customer Quality View' {
         satisfy 'customer quality viewpoint';
-        /* filter xxx */
     }
-    view def 'BBB View' {
-        satisfy 'customer quality viewpoint';
-        /* filter xxx */
-    }
-    view def 'CCC View' {
-        satisfy 'customer quality viewpoint';
-        /* filter xxx */
-    }
-    view def 'PPP View' {
+    view def 'Software Development View' {
         satisfy 'software development viewpoint';
-        /* filter xxx */
     }
-    view def 'QQQ View' {
-        satisfy 'software development viewpoint';
-        /* filter xxx */
-    }
-    view def 'XXX View' {
+    view def 'Verification View' {
         satisfy 'verification viewpoint';
-        /* filter xxx */
     }
-    view def 'YYY View' {
-        satisfy 'verification viewpoint';
-        /* filter xxx */
+
+    // ====================================
+    // Usage of Views (ToDo)
+    // ====================================
+    view 'customer quality view': 'Customer Quality View' {
+        /* ToDo */
     }
-    view def 'ZZZ View' {
-        satisfy 'verification viewpoint';
-        /* filter xxx */
+    view 'software development view': 'Software Development View' {
+        /* ToDo */
+
+    }
+    view 'verification view': 'Verification View' {
+        /* ToDo */
     }
 }

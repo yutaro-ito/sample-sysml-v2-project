@@ -48,3 +48,4 @@ The MBSE processes in this example are as below.
 | 8   | [System Logical Architecture Definition](src/system-logical-architecture-stm.sysml) | 
 | 9   | [System State Machine Definition](src/system-logical-architecture-stm.sysml)        | 
 | 10  | [System Scenario Definition](src/system-logical-architecture-sd.sysml)              | 
+| 11  | [System Variant](src/system-variant.sysml)                                          | 

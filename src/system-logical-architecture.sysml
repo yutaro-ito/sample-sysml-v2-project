@@ -44,17 +44,17 @@ package 'EACS Logical Architecture'
     // Definitions of Parts in System
     // ====================================
     part def Acceleration_Sensor {
-        p_ext_accel: ~Port_External_Acceleration = eacs_logical_architcture.p_ext_in_ext_accel;
-        p_cap_accel: Port_Captured_Acceleration;
+        port p_ext_accel: ~Port_External_Acceleration = eacs_logical_architcture.p_ext_in_ext_accel;
+        port p_cap_accel: Port_Captured_Acceleration;
     }
     part def Temperature_Sensor {
-        p_ext_temp: ~Port_External_Temperature = eacs_logical_architcture.p_ext_in_ext_temp;
-        p_cap_temp: Port_Captured_Temperature;
+        port p_ext_temp: ~Port_External_Temperature = eacs_logical_architcture.p_ext_in_ext_temp;
+        port p_cap_temp: Port_Captured_Temperature;
     }
     part def Controller {
-        p_cap_accel: ~Port_Captured_Acceleration;
-        p_cap_temp: ~Port_Captured_Temperature;
-        p_alert_sig: Port_Alert_Signal = eacs_logical_architcture.p_ext_out_alert_sig;
+        port p_cap_accel: ~Port_Captured_Acceleration;
+        port p_cap_temp: ~Port_Captured_Temperature;
+        port p_alert_sig: Port_Alert_Signal = eacs_logical_architcture.p_ext_out_alert_sig;
     }
 
     // ====================================

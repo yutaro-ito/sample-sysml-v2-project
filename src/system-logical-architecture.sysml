@@ -12,18 +12,28 @@ package 'EACS Logical Architecture'
         // Part with Actions
         perform action perf_system_process :> system_process;
         part accel_sensor: Acceleration_Sensor[1] {
+            // Action
             perform perf_system_process.start_system.initialize_acceleration_sensor;
             perform perf_system_process.monitor_acceleration.capture_acceleration;
+            // Event
+            event occurrence sensedAccelSent;
         }
         part temp_sensor: Temperature_Sensor[1] {
+            // Action
             perform perf_system_process.start_system.initialization_temperature_sensor;
             perform perf_system_process.monitor_temperature.capture_temperature;
+            // Event
+            event occurrence sensedTempSent;            
         }
         part controller: Controller[1] {
+            // Action
             perform perf_system_process.start_system.send_alert_signal_init;
             perform perf_system_process.send_alert_signal_periodically.send_alert_signal_off;
             perform perf_system_process.send_alert_signal_periodically.send_alert_signal_on;
             perform perf_system_process.stop_system.stop_sending_alert_signal;
+            // Event
+            event occurrence sensedAccelReceived;
+            then event occurrence sensedTempReceived;            
         }
 
         // Port (External Interfaces)

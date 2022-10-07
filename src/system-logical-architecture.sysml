@@ -43,11 +43,11 @@ package 'EACS Logical Architecture'
 
         // Internal Interface Connection
         interface: IF_Captured_Acceleration connect
-            end_out_cap_accel :> accel_sensor.p_cap_accel to
-            end_in_cap_accel :> controller.p_cap_accel;
+            end_out_cap_accel ::> accel_sensor.p_cap_accel to
+            end_in_cap_accel ::> controller.p_cap_accel;
         interface: IF_Captured_Temperature connect
-            end_out_cap_temp :> temp_sensor.p_cap_temp to
-            end_in_cap_temp :> controller.p_cap_temp;
+            end_out_cap_temp ::> temp_sensor.p_cap_temp to
+            end_in_cap_temp ::> controller.p_cap_temp;
     }
 
     // ====================================

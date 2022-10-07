@@ -1,7 +1,7 @@
 # Sample SysML v2 Project
 ## Purpose
 The purpose of this repository is to share the sample SysML v2 source files.  
-The sample project follows [SysML v2 2022-07](https://github.com/Systems-Modeling/SysML-v2-Release/tree/2022-07).
+The sample project follows [SysML v2 2022-08](https://github.com/Systems-Modeling/SysML-v2-Release/tree/2022-08).
 ## Assumed Situation
 ### Who are you?
 You are a systems engineer.  
